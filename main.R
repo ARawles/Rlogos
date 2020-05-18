@@ -9,18 +9,23 @@ if (!library("ggplot2", quietly = TRUE, logical.return = TRUE)) {
 if (!library("rsvg", quietly = TRUE, logical.return = TRUE)) {
   install.packages("rsvg")
 }
+
+if (!library("svglite", quietly = TRUE, logical.return = TRUE)) {
+  install.packages("svglite")
+}
 library("hexSticker")
 library("ggplot2")
 library("rsvg")
+library("svglite")
 
 bmrsr_image <- sticker("images/turbines.png", package = "BMRSr", p_size=20, s_x=1, s_y=.75, s_width=.4, s_height = .4,
                        h_fill = "#a2f2a9", h_color = "#003304", p_color = "#003304",
                                filename="logos/bmrsr.png")
 
-teacher_image <- sticker("images/chalkboard.svg", package = "teacheR", p_size=20, s_x=1, s_y=.75, s_width=.4, s_height = .4,
+teacher_image <- sticker("images/chalkboard.svg", package = "teacheR", p_size=20, s_x=1, s_y=.75,# s_width=.4, s_height = .4,
                       h_fill = "#d1dcf0", h_color = "#0b41a3", p_color = "#0b41a3",
                       filename="logos/teacher.png")
 
-operate_image <- sticker("images/crane.svg", package = "opeRate", p_size = 20, s_x = 1, s_y = .75, s_width = .4,
-                         s_height = .4, h_fill = "#ebb16a", h_color = "#bd8a4b", p_color = "#bd8a4b",
+operate_image <- sticker("images/crane.svg", package = "opeRate", p_size = 5, s_x = 1, s_y = .75, #s_width = .1, s_height = .4,
+                         h_fill = "#ffa8a8", h_color = "#bf4545", p_color = "#bf4545", dpi = 300,
                          filename = "logos/operate.png")

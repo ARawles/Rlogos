@@ -31,6 +31,11 @@ if (!library("faviconGeneratoR", quietly = TRUE, logical.return = TRUE)) {
   remotes::install_github("ARawles/faviconGeneratoR")
 }
 
+library("faviconGeneratoR")
+
+## IGNORED BY GIT SO YOU WON'T FIND THIS FILE OUTSIDE OF MY MACHINE
+source("R/api_key.R")
+
 bmrsr_image <- sticker("images/turbines.png", package = "BMRSr", p_size=20, s_x=1, s_y=.75, s_width=.4, s_height = .4,
                        h_fill = "#a2f2a9", h_color = "#003304", p_color = "#003304",
                                filename="logos/bmrsr.png")
@@ -48,4 +53,7 @@ favicongenerator_image <- sticker("images/paintbrush.svg", package = "faviconGen
                                   filename = "logos/favicongenerator.png")
 
 
-## TO DO: Add automated favicon creation
+faviconGeneratoR::generate_favicon(image = "logos/bmrsr.png", save_loc = "favicons/BMRSr")
+faviconGeneratoR::generate_favicon(image = "logos/teacher.png", save_loc = "favicons/teacheR")
+faviconGeneratoR::generate_favicon(image = "logos/operate.png", save_loc = "favicons/opeRate")
+faviconGeneratoR::generate_favicon(image = "logos/favicongenerator.png", save_loc = "favicons/faviconGeneratoR")

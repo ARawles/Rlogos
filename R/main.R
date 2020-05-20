@@ -27,8 +27,8 @@ library("svglite")
 library("httr")
 library("remotes")
 
-if (!library("faviconGeneratoR", quietly = TRUE, logical.return = TRUE)) {
-  remotes::install_github("ARawles/faviconGeneratoR")
+if (!library("faviconR", quietly = TRUE, logical.return = TRUE)) {
+  remotes::install_github("ARawles/faviconR")
 }
 
 library("faviconGeneratoR")
@@ -48,12 +48,12 @@ operate_image <- sticker("images/crane.svg", package = "opeRate", p_size = 20, s
                          h_fill = "#ffa8a8", h_color = "#bf4545", p_color = "#bf4545", dpi = 300,
                          filename = "logos/operate.png")
 
-favicongenerator_image <- sticker("images/paintbrush.svg", package = "faviconGeneratoR", p_size = 15, s_x = 1, s_y = .80, s_width = .3, s_height = .3,
+faviconr_image <- sticker("images/paintbrush.svg", package = "faviconR", p_size = 15, s_x = 1, s_y = .80, s_width = .3, s_height = .3,
                                   h_fill = "#ba61ff", h_color = "#67338f", p_color = "#67338f", dpi = 300,
-                                  filename = "logos/favicongenerator.png")
+                                  filename = "logos/faviconr.png")
 
 
 faviconGeneratoR::generate_favicon(image = "logos/bmrsr.png", save_loc = "favicons/BMRSr")
 faviconGeneratoR::generate_favicon(image = "logos/teacher.png", save_loc = "favicons/teacheR")
 faviconGeneratoR::generate_favicon(image = "logos/operate.png", save_loc = "favicons/opeRate")
-faviconGeneratoR::generate_favicon(image = "logos/favicongenerator.png", save_loc = "favicons/faviconGeneratoR")
+faviconGeneratoR::generate_favicon(image = "logos/faviconr.png", save_loc = "favicons/faviconR")

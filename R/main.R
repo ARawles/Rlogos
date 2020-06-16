@@ -31,7 +31,7 @@ if (!library("faviconR", quietly = TRUE, logical.return = TRUE)) {
   remotes::install_github("ARawles/faviconR")
 }
 
-library("faviconGeneratoR")
+library("faviconR")
 
 ## IGNORED BY GIT SO YOU WON'T FIND THIS FILE OUTSIDE OF MY MACHINE
 source("R/api_key.R")
@@ -53,7 +53,7 @@ faviconr_image <- sticker("images/paintbrush.svg", package = "faviconR", p_size 
                                   filename = "logos/faviconr.png")
 
 
-faviconGeneratoR::generate_favicon(image = "logos/bmrsr.png", save_loc = "favicons/BMRSr")
-faviconGeneratoR::generate_favicon(image = "logos/teacher.png", save_loc = "favicons/teacheR")
-faviconGeneratoR::generate_favicon(image = "logos/operate.png", save_loc = "favicons/opeRate")
-faviconGeneratoR::generate_favicon(image = "logos/faviconr.png", save_loc = "favicons/faviconR")
+faviconR::generate_favicon(image = "logos/bmrsr.png", save_loc = "favicons/BMRSr")
+faviconR::generate_favicon(image = "logos/teacher.png", save_loc = "favicons/teacheR")
+faviconR::generate_favicon(image = "logos/operate.png", save_loc = "favicons/opeRate")
+faviconR::generate_favicon(image = "logos/faviconr.png", save_loc = "favicons/faviconR")

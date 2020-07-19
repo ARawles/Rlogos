@@ -52,8 +52,13 @@ faviconr_image <- sticker("images/paintbrush.svg", package = "faviconR", p_size 
                                   h_fill = "#ba61ff", h_color = "#67338f", p_color = "#67338f", dpi = 300,
                                   filename = "logos/faviconr.png")
 
+packager_image <- sticker("images/box.svg", package = "PackageR", p_size = 15, s_x = 1, s_y = .80, s_width = .3, s_height = .3,
+                          h_fill = "#e38fdb", h_color = "#21031e", p_color = "#21031e", dpi = 300,
+                          filename = "logos/packager.png")
+
 
 faviconR::generate_favicon(image = "logos/bmrsr.png", save_loc = "favicons/BMRSr")
 faviconR::generate_favicon(image = "logos/teacher.png", save_loc = "favicons/teacheR")
 faviconR::generate_favicon(image = "logos/operate.png", save_loc = "favicons/opeRate")
 faviconR::generate_favicon(image = "logos/faviconr.png", save_loc = "favicons/faviconR")
+faviconR::generate_favicon(image = "logos/packager.png", save_loc = "favicons/PackageR")
